@@ -1,0 +1,335 @@
+.product-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+    /* Стили для модального окна */
+.modal1 {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 99999;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 220px; /* Ширина модального окна */
+    background-color: white;
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Стили для контента модального окна */
+.modal-content1 {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Стили для закрывающего крестика */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+    
+
+.button-order {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-order:hover {
+    background-color: #ff5500;
+}
+
+.button-order:focus {
+    outline: none;
+    background-color: #ff4400;
+}
+
+
+.search-form {
+    position: relative;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+#search {
+    width: calc(100% - 118px); /* Учитываем ширину кнопки поиска и её отступы */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px 0 0 12px; /* Изменение скругления для правильного выравнивания */
+    outline: none;
+    display: inline-block; /* Добавляем для возможности соседнего расположения с кнопкой */
+    margin-right: -4px; /* Убираем отрицательное пространство между полями */
+}
+
+button[type="submit"] {
+    background-color: #0B267F;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    font-size: 16px;
+    border-radius: 0 12px 12px 0; /* Изменение скругления для правильного выравнивания */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Добавляем для возможности соседнего расположения с полем ввода */
+    margin-left: -2px; /* Убираем отрицательное пространство между полями */
+}
+
+/* Стили для результатов поиска */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 17px;
+    width: calc(100% - 25px); /* Учитываем границу input */
+    max-height: 250px; /* Ограничиваем высоту, чтобы не занимали слишком много места */
+    overflow-y: auto; /* Добавляем прокрутку, если результатов много */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none; /* Убираем верхнюю границу, чтобы не дублировалась с границей input */
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 1000; /* Устанавливаем поверх других элементов */
+    display: none; /* По умолчанию скрываем результаты */
+}
+
+.search-results ul {
+    padding: 0;
+    margin: 0;
+}
+
+.search-results li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-results li:hover {
+    background-color: #f2f2f2;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+   .search-form {
+        width: 100%; /* Занимает 90% ширины на мобильных устройствах */
+        margin-left: -10px; /* Смещаем форму влево на 10 пикселей */
+
+    }
+}
+
+
+
+#orderForm input[type="text"],
+#orderForm input[type="tel"],
+#orderForm input[type="submit"] {
+    width: 100%; /* Задаем ширину полей ввода на 100% от родительского контейнера */
+    padding: 10px; /* Добавляем внутренний отступ для полей ввода */
+    margin-bottom: 10px; /* Добавляем отступ снизу между полями */
+    border-radius: 8px; /* Задаем скругление углов для полей ввода */
+    border: 1px solid #ccc; /* Добавляем рамку вокруг полей ввода */
+    box-sizing: border-box; /* Учитываем рамку в общей ширине поля ввода */
+}
+
+#orderForm input[type="submit"] {
+    background-color: #4CAF50; /* Задаем цвет фона для кнопки отправки */
+    color: white; /* Задаем цвет текста для кнопки отправки */
+    border: none; /* Убираем границу у кнопки отправки */
+    cursor: pointer; /* Указываем, что кнопка является указателем */
+}
+
+#orderForm input[type="submit"]:hover {
+    background-color: #45a049; /* Задаем цвет фона для кнопки отправки при наведении */
+}
+
+
+
+#orderForm {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white; /* Задайте цвет фона, если необходимо */
+    padding: 20px; /* При необходимости добавьте отступы вокруг формы */
+}
+
+#orderForm h2 {
+    margin-bottom: 15px; /* При необходимости задайте отступ после заголовка */
+}
+
+#orderForm form {
+    width: 100%; /* Чтобы форма занимала 100% ширины контейнера */
+}
+
+@media only screen and (max-width: 600px) {
+    #orderForm {
+        width: 90%; /* Задаем ширину формы */
+        margin: 0 auto; /* Центрируем форму по горизонтали */
+    }
+}
+
+    .button-close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background-color: transparent;
+        color: red;
+        border: none;
+        padding: 0;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-weight: 10; /* Используйте более легкое значение, например, 100 */
+    }
+/* Стили для кнопки увеличения */
+
+        #popup-1 {
+            z-index: 10000000;
+        }
+    #confirmation-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 16px; /* Добавляем скругление углов */
+    text-align: center; /* Отцентрировать текст по центру */
+    line-height: 180px; /* Выравнивание по вертикали */
+    font-size: 20px; /* Увеличиваем размер шрифта */
+    }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 16px; /* Добавляем скругление углов */
+    text-align: center; /* Отцентрировать текст по центру */
+    line-height: 180px; /* Выравнивание по вертикали */
+    font-size: 20px; /* Увеличиваем размер шрифта */
+}
+
+
+
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.full-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.full-screen-container img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer; 
+}
+
+.perv-button,
+.next-button {
+    width: 40px;
+    height: 40px;
+}
+
+.perv-button {
+    float: right;
+    cursor: pointer; 
+}
+
+.next-button {
+    transform: scaleX(-1);
+    cursor: pointer; 
+}
+
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.product-card {
+    width: calc(33.33% - 10px); 
+    height: auto; 
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+} 
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% - 10px); 
+    }
+} 

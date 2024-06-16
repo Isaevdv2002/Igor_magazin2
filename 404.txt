@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>404 Page Not Found</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.animated-404 {
+    text-align: center;
+}
+
+.animated-404 img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.animated-404 h1 {
+    font-size: 100px;
+    color: #e74c3c;
+    margin: 0;
+}
+
+.animated-404 p {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.animated-404 a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.animated-404 a:hover {
+    background-color: #2980b9;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animated-404">
+            <img src="https://landing-ens.ru/sheb/images/truck.png" alt="Truck Icon">
+            <h1>404</h1>
+            <p>Page Not Found</p>
+            <a href="https://landing-ens.ru/pesok3">Вернуться на сайт</a>
+        </div>
+    </div>
+</body>
+</html>
